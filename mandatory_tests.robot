@@ -14,4 +14,13 @@ TC_SEARCH_001 Search For PS5
         Click Button    xpath://button[normalize-space(.)="Hylkää kaikki"]
     END
 
-    
+    Input Text    id:searchinput    ps5
+    Press Keys    id:searchinput    ENTER
+    Wait Until Location Contains    /Product/Search    timeout=20s
+    Wait Until Element Is Visible    css:main h5 a[href*="/Product/Show/"]    timeout=30s
+    Element Should Contain    css:main h5 a[href*="/Product/Show/"]    ps5    ignore_case=True
+
+    Capture Element Screenshot    css:main a[href*="/Product/Show/"]:has(img)    first-product.png
+    Capture Element Screenshot    css:a.btn-cart    cart-icon.png
+
+    Sleep    5s
