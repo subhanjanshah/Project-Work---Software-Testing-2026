@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.0 on darwin)" generated="2026-10-15T13:18:50.482476" rpa="false" schemaversion="5">
+<suite id="s1" name="Mandatory Tests" source="/Users/subhanjanshah/Documents/Sotfware Testing 2026/BITCA26/Project Work - Software Testing 2026/mandatory_tests.robot">
+<test id="s1-t1" name="Open Jimms Website" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-15T13:18:50.577572" level="INFO">Opening browser 'chrome' to base url 'https://www.jimms.fi/'.</msg>
+<arg>https://www.jimms.fi/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-15T13:18:50.577460" elapsed="6.753328"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-15T13:18:57.331316" elapsed="0.367761"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:searchinput</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-15T13:18:57.699334" elapsed="0.028059"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-15T13:18:57.727634" elapsed="0.072849"/>
+</kw>
+<status status="PASS" start="2026-10-15T13:18:50.576535" elapsed="7.224092"/>
+</test>
+<status status="PASS" start="2026-10-15T13:18:50.482936" elapsed="7.317934"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Mandatory Tests" id="s1" pass="1" fail="0" skip="0">Mandatory Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
