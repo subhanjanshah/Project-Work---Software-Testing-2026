@@ -1,51 +1,88 @@
 *** Settings ***
-Library         SeleniumLibrary
-Test Teardown   Close All Browsers
+Library    SeleniumLibrary
+
+*** Variables ***
+${product_title}    ${EMPTY}
 
 *** Test Cases ***
 TC_SEARCH_001 Search For PS5
-    Open Store And Search For PS5
-    Scroll Element Into View    css:main a[href*="/Product/Show/"]:has(img)
-    Wait For Condition    return (() => { const img = document.querySelector('main a[href*="/Product/Show/"] img'); return img && img.complete && img.naturalWidth > 0; })();    timeout=30s
-    Capture Element Screenshot    css:main a[href*="/Product/Show/"]:has(img)    first-product.png
-    Capture Element Screenshot    css:a.btn-cart    cart-icon.png
-    Sleep    5s
-
-TC_PRODUCT_001 Open Product From Search
-    Open Store And Search For PS5
-    ${selected_title}=    Get Text    css:main h5 a[href*="/Product/Show/"]
-    Click Link    css:main h5 a[href*="/Product/Show/"]
-    Wait Until Location Contains    /Product/Show/    timeout=20s
-    Wait Until Element Is Visible    css:main h1    timeout=20s
-    Element Should Contain    css:main h1    ps5    ignore_case=True
-    ${product_title}=    Get Text    css:main h1
-    Should Be Equal    ${product_title}    ${selected_title}
-    Sleep    5s
-
-TC_PRODUCT_002 Verify Add To Cart Link
-    Open Store And Search For PS5
-    Click Link    css:main h5 a[href*="/Product/Show/"]
-    Wait Until Location Contains    /Product/Show/    timeout=20s
-    Wait Until Element Is Visible    css:main h1    timeout=20s
-    Wait Until Element Is Visible    css:main a[href*="/ShoppingCart/AddItem"]    timeout=20s
-    Element Should Contain    css:main a[href*="/ShoppingCart/AddItem"]    Lisää koriin    ignore_case=True
-    Element Should Be Enabled    css:main a[href*="/ShoppingCart/AddItem"]
-    Sleep    5s
-
-*** Keywords ***
-Open Store And Search For PS5
     Open Browser    https://www.jimms.fi/    chrome
     Maximize Browser Window
-    Wait Until Element Is Visible    id:searchinput    timeout=20s
+    Set Screenshot Directory    .
+    Sleep    5s
 
-    ${cookie_visible}=    Run Keyword And Return Status
-    ...    Wait Until Element Is Visible    xpath://button[normalize-space(.)="Hylkää kaikki"]    timeout=5s
-    IF    ${cookie_visible}
+    ${cookie_count}=    Get Element Count    xpath://button[normalize-space(.)="Hylkää kaikki"]
+    FOR    ${index}    IN RANGE    ${cookie_count}
         Click Button    xpath://button[normalize-space(.)="Hylkää kaikki"]
+        Sleep    1s
     END
 
+    Click Element    id:searchinput
     Input Text    id:searchinput    ps5
-    Press Keys    id:searchinput    ENTER
-    Wait Until Location Contains    /Product/Search    timeout=20s
-    Wait Until Element Is Visible    css:main h5 a[href*="/Product/Show/"]    timeout=30s
-    Element Should Contain    css:main h5 a[href*="/Product/Show/"]    ps5    ignore_case=True
+    Sleep    5s
+
+    # Click the search suggestion below the input field.
+    Element Should Be Visible    xpath://a[@href="/fi/Product/Search?q=ps5"]
+    Click Element    xpath://a[@href="/fi/Product/Search?q=ps5"]
+    Sleep    8s
+
+    Capture Page Screenshot    search-check.png
+    Element Should Contain    css:main    Hakusanalla "ps5"
+    Element Should Be Visible    xpath:(//main//h5/a)[1]
+    Element Should Contain    xpath:(//main//h5/a)[1]    PS5
+
+    ${product_title}=    Get Text    xpath:(//main//h5/a)[1]
+    Set Suite Variable    \${product_title}    ${product_title}
+    Log To Console    Selected product: ${product_title}
+
+    Capture Element Screenshot    xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]    first-product.png
+    Sleep    3s
+    Capture Element Screenshot    xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]    first-product.png
+    Capture Element Screenshot    css:a.btn-cart    cart-icon.png
+
+TC_PRODUCT_001 Open Product From Search
+    Element Should Contain    css:main    Hakusanalla "ps5"
+    Element Should Contain    xpath:(//main//h5/a)[1]    PS5
+    Click Element    xpath:(//main//h5/a)[1]
+    Sleep    5s
+
+    Element Should Be Visible    css:main h1
+    Element Should Contain    css:main h1    PS5
+
+    ${opened_title}=    Get Text    css:main h1
+    Should Be Equal As Strings    ${opened_title}    ${product_title}
+    Capture Page Screenshot    product-page.png
+    Sleep    3s
+
+TC_PRODUCT_002 Verify Add To Cart Link
+    Element Should Be Visible    css:main h1
+    Element Should Contain    css:main h1    PS5
+
+    Element Should Be Visible    xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]
+    Element Should Contain    xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]    LISÄÄ KORIIN
+    Element Should Be Enabled    xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]
+    Sleep    3s
+
+TC_CART_001 Add Product To Shopping Cart
+    # Check that we are on the selected product before adding it.
+    ${opened_title}=    Get Text    css:main h1
+    Should Be Equal As Strings    ${opened_title}    ${product_title}
+    Element Should Contain    css:main h1    PS5
+
+    Click Element    xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]
+    Sleep    5s
+
+    Click Element    css:a.btn-cart
+    Sleep    5s
+
+    Element Should Contain    css:main h1    OSTOSKORI
+    Element Should Contain    css:main article    ${product_title}
+    Capture Page Screenshot    shopping-cart.png
+    Sleep    3s
+
+    # Remove the test item after saving the evidence.
+    Click Element    xpath://main//article//*[@role="button" and normalize-space(.)="close"]
+    Sleep    3s
+    Page Should Contain    Ostoskorisi on tyhjä
+
+    Close Browser
