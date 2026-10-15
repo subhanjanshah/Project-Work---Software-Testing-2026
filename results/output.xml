@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.0 on darwin)" generated="2026-10-15T13:33:17.434054" rpa="false" schemaversion="5">
+<suite id="s1" name="Project Work - Software Testing 2026" source="/Users/subhanjanshah/Documents/Sotfware Testing 2026/BITCA26/Project Work - Software Testing 2026">
+<suite id="s1-s1" name="Mandatory Tests" source="/Users/subhanjanshah/Documents/Sotfware Testing 2026/BITCA26/Project Work - Software Testing 2026/mandatory_tests.robot">
+<test id="s1-s1-t1" name="Open Jimms Website" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-15T13:33:17.562999" level="INFO">Opening browser 'chrome' to base url 'https://www.jimms.fi/'.</msg>
+<arg>https://www.jimms.fi/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-15T13:33:17.562816" elapsed="1.507334"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-15T13:33:19.070497" elapsed="0.367552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:searchinput</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-15T13:33:19.438225" elapsed="0.012030"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-10-15T13:33:24.699885" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-15T13:33:24.700115" level="FAIL">Element 'xpath://button[normalize-space(.)="Hylkää kaikki"]' not visible after 5 seconds.</msg>
+<arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-10-15T13:33:19.450918" elapsed="5.255165">Element 'xpath://button[normalize-space(.)="Hylkää kaikki"]' not visible after 5 seconds.</status>
+</kw>
+<msg time="2026-10-15T13:33:24.706230" level="INFO">${cookie_visible} = False</msg>
+<var>${cookie_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-10-15T13:33:19.450462" elapsed="5.255815"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookie_visible}">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-15T13:33:24.706647" elapsed="0.000062"/>
+</kw>
+<status status="NOT RUN" start="2026-10-15T13:33:24.706465" elapsed="0.000281"/>
+</branch>
+<status status="PASS" start="2026-10-15T13:33:24.706435" elapsed="0.000337"/>
+</if>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-15T13:33:24.706906" elapsed="0.118401"/>
+</kw>
+<status status="PASS" start="2026-10-15T13:33:17.561261" elapsed="7.264184"/>
+</test>
+<status status="PASS" start="2026-10-15T13:33:17.456230" elapsed="7.372316"/>
+</suite>
+<status status="PASS" start="2026-10-15T13:33:17.437507" elapsed="7.392521"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Project Work - Software Testing 2026" id="s1" pass="1" fail="0" skip="0">Project Work - Software Testing 2026</stat>
+<stat name="Mandatory Tests" id="s1-s1" pass="1" fail="0" skip="0">Project Work - Software Testing 2026.Mandatory Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
