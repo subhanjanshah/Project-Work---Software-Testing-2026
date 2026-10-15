@@ -20,6 +20,8 @@ TC_SEARCH_001 Search For PS5
     Wait Until Element Is Visible    css:main h5 a[href*="/Product/Show/"]    timeout=30s
     Element Should Contain    css:main h5 a[href*="/Product/Show/"]    ps5    ignore_case=True
 
+    Scroll Element Into View    css:main a[href*="/Product/Show/"]:has(img)
+    Wait For Condition    return (() => { const img = document.querySelector('main a[href*="/Product/Show/"] img'); return img && img.complete && img.naturalWidth > 0; })();    timeout=30s
     Capture Element Screenshot    css:main a[href*="/Product/Show/"]:has(img)    first-product.png
     Capture Element Screenshot    css:a.btn-cart    cart-icon.png
 
