@@ -41,7 +41,7 @@ TC_NAV_001 Verify Category Landing Pages
     Log To Console    Checking category: Ammattikäyttö ja AI
     Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]
     Sleep    3s
-    Element Should Be Visible    xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]
+        Element Should Be Visible    xpath://header//nav[contains(@class,"site-nav")]/ul/li[a[normalize-space(.)="Ammattikäyttö ja AI"]]//a[normalize-space(.)="AMD EPYC prosessorit"]
     Capture Page Screenshot    category-ammattikaytto-ai.png
 
     Click Element    css:header a[title="Etusivu"]
