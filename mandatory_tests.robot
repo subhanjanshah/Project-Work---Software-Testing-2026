@@ -86,14 +86,30 @@ TC_CART_001 Add Product To Shopping Cart
     Page Should Contain    Ostoskorisi on tyhjä
 
 TC_NAV_001 Verify Category Landing Pages
-    Click Element    xpath://header//a[@href="/fi/Product/Tietokoneet"]
-    Sleep    5s
+    ${categories}=    Create List
+    ...    Tietokoneet
+    ...    Komponentit
+    ...    Oheislaitteet
+    ...    Pelaaminen
+    ...    Sim Racing
+    ...    Verkkotuotteet
+    ...    Tarvikkeet
+    ...    Jäähdytys- ja erikoistuotteet
+    ...    Ohjelmistot
+    ...    Palvelut
 
-    Element Should Be Visible    css:main h1
-    Element Should Contain    css:main h1    Tietokoneet
-    Element Should Contain    css:main    Pöytäkone vai kannettava?
+    FOR    ${category}    IN    @{categories}
+        Log To Console    Checking category: ${category}
 
-    Capture Page Screenshot    category-tietokoneet.png
-    Sleep    3s
+        Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]
+        Sleep    5s
+
+        Element Should Be Visible    css:main h1
+        Element Should Contain    css:main h1    ${category}
+        Element Should Be Visible    xpath:(//main//h5/a)[1]
+
+        Capture Page Screenshot    category-${category}.png
+        Sleep    2s
+    END
 
     Close Browser
