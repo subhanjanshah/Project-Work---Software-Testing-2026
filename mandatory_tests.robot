@@ -5,6 +5,56 @@ Library    SeleniumLibrary
 ${product_title}    ${EMPTY}
 
 *** Test Cases ***
+TC_NAV_001 Verify Category Landing Pages
+    Open Browser    https://www.jimms.fi/    chrome
+    Maximize Browser Window
+    Set Screenshot Directory    .
+    Sleep    5s
+
+    ${cookie_count}=    Get Element Count    xpath://button[normalize-space(.)="Hylkää kaikki"]
+    FOR    ${index}    IN RANGE    ${cookie_count}
+        Click Button    xpath://button[normalize-space(.)="Hylkää kaikki"]
+        Sleep    1s
+    END
+
+    ${categories}=    Create List
+    ...    Tietokoneet
+    ...    Komponentit
+    ...    Oheislaitteet
+    ...    Pelaaminen
+    ...    Sim Racing
+    ...    Verkkotuotteet
+    ...    Tarvikkeet
+    ...    Jäähdytys- ja erikoistuotteet
+    ...    Ohjelmistot
+    ...    Palvelut
+
+    FOR    ${category}    IN    @{categories}
+        Log To Console    Checking category: ${category}
+
+        Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]
+        Sleep    5s
+
+        Element Should Be Visible    css:main h1
+        Element Should Contain    css:main h1    ${category}
+        Element Should Be Visible    xpath:(//main//h5/a)[1]
+        Capture Page Screenshot    category-${category}.png
+
+        # Return to the homepage before the next category.
+        Click Element    css:header a[title="Etusivu"]
+        Sleep    1s
+    END
+
+    # Open and check the Ammattikäyttö ja AI dropdown.
+    Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]
+    Sleep    3s
+    Element Should Be Visible    xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]
+    Capture Page Screenshot    category-ammattikaytto-ai.png
+
+    Click Element    css:header a[title="Etusivu"]
+    Sleep    1s
+    Close Browser
+
 TC_SEARCH_001 Search For PS5
     Open Browser    https://www.jimms.fi/    chrome
     Maximize Browser Window
@@ -35,10 +85,14 @@ TC_SEARCH_001 Search For PS5
     Set Suite Variable    \${product_title}    ${product_title}
     Log To Console    Selected product: ${product_title}
 
+    # Capture again after allowing the product image to load.
     Capture Element Screenshot    xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]    first-product.png
     Sleep    3s
     Capture Element Screenshot    xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]    first-product.png
-    Capture Element Screenshot    css:a.btn-cart    cart-icon.png
+
+    # Capture the cart button belonging to the first search result.
+    Capture Element Screenshot    xpath:(//main//a[contains(@href, '/ShoppingCart/AddItem')])[1]//i    cart-icon.png
+    Sleep    3s
 
 TC_PRODUCT_001 Open Product From Search
     Element Should Contain    css:main    Hakusanalla "ps5"
@@ -64,7 +118,7 @@ TC_PRODUCT_002 Verify Add To Cart Link
     Sleep    3s
 
 TC_CART_001 Add Product To Shopping Cart
-    # Check that we are on the selected product before adding it.
+    # Check the selected product before adding it.
     ${opened_title}=    Get Text    css:main h1
     Should Be Equal As Strings    ${opened_title}    ${product_title}
     Element Should Contain    css:main h1    PS5
@@ -84,32 +138,5 @@ TC_CART_001 Add Product To Shopping Cart
     Click Element    xpath://main//article//*[@role="button" and normalize-space(.)="close"]
     Sleep    3s
     Page Should Contain    Ostoskorisi on tyhjä
-
-TC_NAV_001 Verify Category Landing Pages
-    ${categories}=    Create List
-    ...    Tietokoneet
-    ...    Komponentit
-    ...    Oheislaitteet
-    ...    Pelaaminen
-    ...    Sim Racing
-    ...    Verkkotuotteet
-    ...    Tarvikkeet
-    ...    Jäähdytys- ja erikoistuotteet
-    ...    Ohjelmistot
-    ...    Palvelut
-
-    FOR    ${category}    IN    @{categories}
-        Log To Console    Checking category: ${category}
-
-        Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]
-        Sleep    5s
-
-        Element Should Be Visible    css:main h1
-        Element Should Contain    css:main h1    ${category}
-        Element Should Be Visible    xpath:(//main//h5/a)[1]
-
-        Capture Page Screenshot    category-${category}.png
-        Sleep    2s
-    END
 
     Close Browser
