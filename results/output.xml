@@ -1,368 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.14.0 on darwin)" generated="2026-10-16T12:56:29.122554" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.14.0 on darwin)" generated="2026-10-16T13:12:32.613058" rpa="false" schemaversion="5">
 <suite id="s1" name="Project Work - Software Testing 2026" source="/Users/subhanjanshah/Documents/Sotfware Testing 2026/BITCA26/Project Work - Software Testing 2026">
 <suite id="s1-s1" name="Mandatory Tests" source="/Users/subhanjanshah/Documents/Sotfware Testing 2026/BITCA26/Project Work - Software Testing 2026/mandatory_tests.robot">
-<test id="s1-s1-t1" name="TC_SEARCH_001 Search For PS5" line="8">
+<test id="s1-s1-t1" name="TC_NAV_001 Verify Category Landing Pages" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:29.258027" level="INFO">Opening browser 'chrome' to base url 'https://www.jimms.fi/'.</msg>
+<msg time="2026-10-16T13:12:32.757535" level="INFO">Opening browser 'chrome' to base url 'https://www.jimms.fi/'.</msg>
 <arg>https://www.jimms.fi/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-16T12:56:29.257624" elapsed="5.111789"/>
+<status status="PASS" start="2026-10-16T13:12:32.757305" elapsed="1.534239"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-10-16T12:56:34.370159" elapsed="0.369581"/>
+<status status="PASS" start="2026-10-16T13:12:34.291962" elapsed="0.373134"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>.</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-10-16T12:56:34.739913" elapsed="0.000279"/>
+<status status="PASS" start="2026-10-16T13:12:34.665321" elapsed="0.000401"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:56:39.742815" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:12:39.667267" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:56:34.740323" elapsed="5.003152"/>
+<status status="PASS" start="2026-10-16T13:12:34.665820" elapsed="5.002171"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:39.757046" level="INFO">${cookie_count} = 0</msg>
+<msg time="2026-10-16T13:12:39.684803" level="INFO">${cookie_count} = 0</msg>
 <var>${cookie_count}</var>
 <arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:39.744259" elapsed="0.012946"/>
+<status status="PASS" start="2026-10-16T13:12:39.668856" elapsed="0.016118"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Click Button" owner="SeleniumLibrary">
 <arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-10-16T12:56:39.758318" elapsed="0.000074"/>
+<status status="NOT RUN" start="2026-10-16T13:12:39.686214" elapsed="0.000135"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="NOT RUN" start="2026-10-16T12:56:39.758506" elapsed="0.000056"/>
+<status status="NOT RUN" start="2026-10-16T13:12:39.686496" elapsed="0.000075"/>
 </kw>
 <var name="${index}"/>
-<status status="NOT RUN" start="2026-10-16T12:56:39.758136" elapsed="0.000469"/>
+<status status="NOT RUN" start="2026-10-16T13:12:39.685942" elapsed="0.000683"/>
 </iter>
 <var>${index}</var>
 <value>${cookie_count}</value>
-<status status="NOT RUN" start="2026-10-16T12:56:39.757594" elapsed="0.001059"/>
+<status status="NOT RUN" start="2026-10-16T13:12:39.685459" elapsed="0.001229"/>
 </for>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:39.759043" level="INFO">Clicking element 'id:searchinput'.</msg>
-<arg>id:searchinput</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:39.758803" elapsed="0.031524"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:39.790735" level="INFO">Typing text 'ps5' into text field 'id:searchinput'.</msg>
-<arg>id:searchinput</arg>
-<arg>ps5</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:39.790505" elapsed="0.043527"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:56:44.835752" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:56:39.834192" elapsed="5.002205"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:44.861216" level="INFO">Element 'xpath://a[@href="/fi/Product/Search?q=ps5"]' is displayed.</msg>
-<arg>xpath://a[@href="/fi/Product/Search?q=ps5"]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:56:44.837552" elapsed="0.025134"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:44.864116" level="INFO">Clicking element 'xpath://a[@href="/fi/Product/Search?q=ps5"]'.</msg>
-<arg>xpath://a[@href="/fi/Product/Search?q=ps5"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:44.863646" elapsed="0.225383"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:56:53.090945" level="INFO">Slept 8 seconds.</msg>
-<arg>8s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:56:45.089245" elapsed="8.002213"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.198908" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../search-check.png"&gt;&lt;img src="../search-check.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>search-check.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.092171" elapsed="0.106845"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.290347" level="INFO">Element 'css:main' contains text 'Hakusanalla "ps5"'.</msg>
-<arg>css:main</arg>
-<arg>Hakusanalla "ps5"</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.199229" elapsed="0.091253"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.296137" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
-<arg>xpath:(//main//h5/a)[1]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.290721" elapsed="0.005503"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.300892" level="INFO">Element 'xpath:(//main//h5/a)[1]' contains text 'PS5'.</msg>
-<arg>xpath:(//main//h5/a)[1]</arg>
-<arg>PS5</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.296408" elapsed="0.004564"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.305086" level="INFO">${product_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
-<var>${product_title}</var>
-<arg>xpath:(//main//h5/a)[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.301135" elapsed="0.004004"/>
-</kw>
-<kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-10-16T12:56:53.305649" level="INFO">${product_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
-<arg>\${product_title}</arg>
-<arg>${product_title}</arg>
-<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.305372" elapsed="0.000329"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Selected product: ${product_title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.305860" elapsed="0.000210"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:53.338332" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../first-product.png"&gt;&lt;img src="../first-product.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]</arg>
-<arg>first-product.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.306171" elapsed="0.032280"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:56:56.339061" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:56:53.338667" elapsed="3.000880"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:56.391711" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../first-product.png"&gt;&lt;img src="../first-product.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]</arg>
-<arg>first-product.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.340187" elapsed="0.051805"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:56.437560" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../cart-icon.png"&gt;&lt;img src="../cart-icon.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>css:a.btn-cart</arg>
-<arg>cart-icon.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.392701" elapsed="0.044993"/>
-</kw>
-<status status="PASS" start="2026-10-16T12:56:29.255598" elapsed="27.182368"/>
-</test>
-<test id="s1-s1-t2" name="TC_PRODUCT_001 Open Product From Search" line="43">
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:56.520357" level="INFO">Element 'css:main' contains text 'Hakusanalla "ps5"'.</msg>
-<arg>css:main</arg>
-<arg>Hakusanalla "ps5"</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.442703" elapsed="0.077762"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:56.525091" level="INFO">Element 'xpath:(//main//h5/a)[1]' contains text 'PS5'.</msg>
-<arg>xpath:(//main//h5/a)[1]</arg>
-<arg>PS5</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.520673" elapsed="0.004494"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:56:56.525566" level="INFO">Clicking element 'xpath:(//main//h5/a)[1]'.</msg>
-<arg>xpath:(//main//h5/a)[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.525349" elapsed="0.341731"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:01.869526" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:56:56.867333" elapsed="5.002690"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:01.886416" level="INFO">Element 'css:main h1' is displayed.</msg>
-<arg>css:main h1</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:01.870740" elapsed="0.015958"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:01.896268" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
-<arg>css:main h1</arg>
-<arg>PS5</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:01.887172" elapsed="0.009284"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:01.904018" level="INFO">${opened_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
-<var>${opened_title}</var>
-<arg>css:main h1</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:01.896784" elapsed="0.007346"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${opened_title}</arg>
-<arg>${product_title}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-10-16T12:57:01.904443" elapsed="0.000460"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:02.031848" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../product-page.png"&gt;&lt;img src="../product-page.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>product-page.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:01.905070" elapsed="0.126888"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:05.033568" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:02.032188" elapsed="3.001991"/>
-</kw>
-<status status="PASS" start="2026-10-16T12:56:56.441025" elapsed="8.594057"/>
-</test>
-<test id="s1-s1-t3" name="TC_PRODUCT_002 Verify Add To Cart Link" line="57">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:05.059196" level="INFO">Element 'css:main h1' is displayed.</msg>
-<arg>css:main h1</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.047768" elapsed="0.011685"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:05.068823" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
-<arg>css:main h1</arg>
-<arg>PS5</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.059910" elapsed="0.009117"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:05.077969" level="INFO">Element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]' is displayed.</msg>
-<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.069412" elapsed="0.008695"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:05.084603" level="INFO">Element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]' contains text 'LISÄÄ KORIIN'.</msg>
-<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
-<arg>LISÄÄ KORIIN</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.078362" elapsed="0.006354"/>
-</kw>
-<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
-<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.084927" elapsed="0.007194"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:08.094265" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:05.092262" elapsed="3.002655"/>
-</kw>
-<status status="PASS" start="2026-10-16T12:57:05.040808" elapsed="3.054991"/>
-</test>
-<test id="s1-s1-t4" name="TC_CART_001 Add Product To Shopping Cart" line="66">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:08.119420" level="INFO">${opened_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
-<var>${opened_title}</var>
-<arg>css:main h1</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:08.106727" elapsed="0.012876"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${opened_title}</arg>
-<arg>${product_title}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-10-16T12:57:08.120069" elapsed="0.000643"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:08.129596" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
-<arg>css:main h1</arg>
-<arg>PS5</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:08.120928" elapsed="0.008838"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:08.130397" level="INFO">Clicking element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]'.</msg>
-<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:08.130076" elapsed="0.043048"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:13.174368" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:08.173297" elapsed="5.001717"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:13.176897" level="INFO">Clicking element 'css:a.btn-cart'.</msg>
-<arg>css:a.btn-cart</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:13.175986" elapsed="0.220438"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:18.399221" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:13.396657" elapsed="5.002902"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:18.410233" level="INFO">Element 'css:main h1' contains text 'OSTOSKORI'.</msg>
-<arg>css:main h1</arg>
-<arg>OSTOSKORI</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:18.400057" elapsed="0.010342"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:18.421637" level="INFO">Element 'css:main article' contains text 'Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!'.</msg>
-<arg>css:main article</arg>
-<arg>${product_title}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:18.410725" elapsed="0.011020"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:18.478839" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../shopping-cart.png"&gt;&lt;img src="../shopping-cart.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>shopping-cart.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:18.422022" elapsed="0.056931"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:21.480590" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:18.479152" elapsed="3.001640"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:21.481322" level="INFO">Clicking element 'xpath://main//article//*[@role="button" and normalize-space(.)="close"]'.</msg>
-<arg>xpath://main//article//*[@role="button" and normalize-space(.)="close"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:21.481063" elapsed="0.023935"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:24.507059" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:21.505181" elapsed="3.002490"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:24.524223" level="INFO">Current page contains text 'Ostoskorisi on tyhjä'.</msg>
-<arg>Ostoskorisi on tyhjä</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-10-16T12:57:24.508590" elapsed="0.015977"/>
-</kw>
-<status status="PASS" start="2026-10-16T12:57:08.101332" elapsed="16.423940"/>
-</test>
-<test id="s1-s1-t5" name="TC_NAV_001 Verify Category Landing Pages" line="88">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-10-16T12:57:24.539719" level="INFO">${categories} = ['Tietokoneet', 'Komponentit', 'Oheislaitteet', 'Pelaaminen', 'Sim Racing', 'Verkkotuotteet', 'Tarvikkeet', 'Jäähdytys- ja erikoistuotteet', 'Ohjelmistot', 'Palvelut']</msg>
+<msg time="2026-10-16T13:12:39.687622" level="INFO">${categories} = ['Tietokoneet', 'Komponentit', 'Oheislaitteet', 'Pelaaminen', 'Sim Racing', 'Verkkotuotteet', 'Tarvikkeet', 'Jäähdytys- ja erikoistuotteet', 'Ohjelmistot', 'Palvelut']</msg>
 <var>${categories}</var>
 <arg>Tietokoneet</arg>
 <arg>Komponentit</arg>
@@ -375,542 +65,1006 @@
 <arg>Ohjelmistot</arg>
 <arg>Palvelut</arg>
 <doc>Creates and returns a list containing the given items.</doc>
-<status status="PASS" start="2026-10-16T12:57:24.539195" elapsed="0.000639"/>
+<status status="PASS" start="2026-10-16T13:12:39.686866" elapsed="0.000850"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:57:24.540634" elapsed="0.000337"/>
+<status status="PASS" start="2026-10-16T13:12:39.688248" elapsed="0.000343"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:24.541389" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Tietokoneet"]'.</msg>
+<msg time="2026-10-16T13:12:39.688989" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Tietokoneet"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:24.541124" elapsed="0.236586"/>
+<status status="PASS" start="2026-10-16T13:12:39.688728" elapsed="0.424529"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:29.780730" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:12:45.116072" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:24.777927" elapsed="5.003299"/>
+<status status="PASS" start="2026-10-16T13:12:40.113381" elapsed="5.003177"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:29.793647" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:12:45.133138" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:29.781624" elapsed="0.012273"/>
+<status status="PASS" start="2026-10-16T13:12:45.117025" elapsed="0.016288"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:29.801931" level="INFO">Element 'css:main h1' contains text 'Tietokoneet'.</msg>
+<msg time="2026-10-16T13:12:45.142234" level="INFO">Element 'css:main h1' contains text 'Tietokoneet'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:29.794146" elapsed="0.007927"/>
+<status status="PASS" start="2026-10-16T13:12:45.133498" elapsed="0.008843"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:29.808781" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:12:45.149398" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:29.802238" elapsed="0.006675"/>
+<status status="PASS" start="2026-10-16T13:12:45.142464" elapsed="0.007011"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:29.942145" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Tietokoneet.png"&gt;&lt;img src="../category-Tietokoneet.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:12:45.291828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Tietokoneet.png"&gt;&lt;img src="../category-Tietokoneet.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:29.809086" elapsed="0.133172"/>
+<status status="PASS" start="2026-10-16T13:12:45.149599" elapsed="0.142334"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:12:45.292226" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:12:45.292039" elapsed="0.176963"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:31.943840" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:12:46.469650" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:29.942364" elapsed="2.002117"/>
+<status status="PASS" start="2026-10-16T13:12:45.469192" elapsed="1.000908"/>
 </kw>
 <var name="${category}">Tietokoneet</var>
-<status status="PASS" start="2026-10-16T12:57:24.540445" elapsed="7.404384"/>
+<status status="PASS" start="2026-10-16T13:12:39.688106" elapsed="6.782257"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:57:31.946125" elapsed="0.001111"/>
+<status status="PASS" start="2026-10-16T13:12:46.471055" elapsed="0.000576"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:31.947961" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Komponentit"]'.</msg>
+<msg time="2026-10-16T13:12:46.472203" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Komponentit"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:31.947499" elapsed="0.233889"/>
+<status status="PASS" start="2026-10-16T13:12:46.471807" elapsed="0.252717"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:37.183573" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:12:51.727727" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:32.181550" elapsed="5.002183"/>
+<status status="PASS" start="2026-10-16T13:12:46.724859" elapsed="5.003390"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:37.189473" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:12:51.745860" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:37.183889" elapsed="0.005682"/>
+<status status="PASS" start="2026-10-16T13:12:51.728674" elapsed="0.017475"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:37.194707" level="INFO">Element 'css:main h1' contains text 'Komponentit'.</msg>
+<msg time="2026-10-16T13:12:51.756427" level="INFO">Element 'css:main h1' contains text 'Komponentit'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:37.189678" elapsed="0.005135"/>
+<status status="PASS" start="2026-10-16T13:12:51.746425" elapsed="0.010214"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:37.199174" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:12:51.764305" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:37.194931" elapsed="0.004330"/>
+<status status="PASS" start="2026-10-16T13:12:51.756897" elapsed="0.007557"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:37.327412" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Komponentit.png"&gt;&lt;img src="../category-Komponentit.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:12:51.909074" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Komponentit.png"&gt;&lt;img src="../category-Komponentit.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:37.199377" elapsed="0.128149"/>
+<status status="PASS" start="2026-10-16T13:12:51.764651" elapsed="0.144533"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:12:51.909480" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:12:51.909294" elapsed="0.231112"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:39.327973" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:12:53.142029" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:37.327639" elapsed="2.000828"/>
+<status status="PASS" start="2026-10-16T13:12:52.140691" elapsed="1.001932"/>
 </kw>
 <var name="${category}">Komponentit</var>
-<status status="PASS" start="2026-10-16T12:57:31.945384" elapsed="7.383326"/>
+<status status="PASS" start="2026-10-16T13:12:46.470614" elapsed="6.672327"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:57:39.329539" elapsed="0.000827"/>
+<status status="PASS" start="2026-10-16T13:12:53.143963" elapsed="0.000938"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:39.331194" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Oheislaitteet"]'.</msg>
+<msg time="2026-10-16T13:12:53.145720" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Oheislaitteet"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:39.330674" elapsed="0.290395"/>
+<status status="PASS" start="2026-10-16T13:12:53.145204" elapsed="0.413097"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:44.622241" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:12:58.559955" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:39.621374" elapsed="5.001365"/>
+<status status="PASS" start="2026-10-16T13:12:53.558875" elapsed="5.001579"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:44.635989" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:12:58.574790" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:44.623136" elapsed="0.013044"/>
+<status status="PASS" start="2026-10-16T13:12:58.560865" elapsed="0.014112"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:44.644341" level="INFO">Element 'css:main h1' contains text 'Oheislaitteet'.</msg>
+<msg time="2026-10-16T13:12:58.583246" level="INFO">Element 'css:main h1' contains text 'Oheislaitteet'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:44.636387" elapsed="0.008108"/>
+<status status="PASS" start="2026-10-16T13:12:58.575190" elapsed="0.008191"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:44.651267" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:12:58.590143" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:44.644662" elapsed="0.006699"/>
+<status status="PASS" start="2026-10-16T13:12:58.583548" elapsed="0.006709"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:44.780398" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Oheislaitteet.png"&gt;&lt;img src="../category-Oheislaitteet.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:12:58.716820" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Oheislaitteet.png"&gt;&lt;img src="../category-Oheislaitteet.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:44.651505" elapsed="0.129001"/>
+<status status="PASS" start="2026-10-16T13:12:58.590415" elapsed="0.126519"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:12:58.717235" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:12:58.717049" elapsed="0.244873"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:46.783055" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:12:59.963464" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:44.780612" elapsed="2.003048"/>
+<status status="PASS" start="2026-10-16T13:12:58.962225" elapsed="1.001727"/>
 </kw>
 <var name="${category}">Oheislaitteet</var>
-<status status="PASS" start="2026-10-16T12:57:39.329040" elapsed="7.454971"/>
+<status status="PASS" start="2026-10-16T13:12:53.143318" elapsed="6.820875"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:57:46.785141" elapsed="0.000899"/>
+<status status="PASS" start="2026-10-16T13:12:59.965049" elapsed="0.000835"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:46.786880" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Pelaaminen"]'.</msg>
+<msg time="2026-10-16T13:12:59.966774" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Pelaaminen"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:46.786356" elapsed="0.259576"/>
+<status status="PASS" start="2026-10-16T13:12:59.966210" elapsed="0.400986"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:52.048043" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:05.368156" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:47.046158" elapsed="5.002375"/>
+<status status="PASS" start="2026-10-16T13:13:00.367524" elapsed="5.000881"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:52.063319" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:05.379434" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:52.048939" elapsed="0.014683"/>
+<status status="PASS" start="2026-10-16T13:13:05.368619" elapsed="0.011116"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:52.073515" level="INFO">Element 'css:main h1' contains text 'Pelaaminen'.</msg>
+<msg time="2026-10-16T13:13:05.389387" level="INFO">Element 'css:main h1' contains text 'Pelaaminen'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:52.063914" elapsed="0.009827"/>
+<status status="PASS" start="2026-10-16T13:13:05.379968" elapsed="0.009603"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:52.081474" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:05.397118" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:52.073975" elapsed="0.007640"/>
+<status status="PASS" start="2026-10-16T13:13:05.389770" elapsed="0.007497"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:52.210468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Pelaaminen.png"&gt;&lt;img src="../category-Pelaaminen.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:05.523547" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Pelaaminen.png"&gt;&lt;img src="../category-Pelaaminen.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:52.081812" elapsed="0.128766"/>
+<status status="PASS" start="2026-10-16T13:13:05.397466" elapsed="0.126210"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:05.524003" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:05.523795" elapsed="0.168494"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:54.211708" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:06.694021" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:52.210670" elapsed="2.001574"/>
+<status status="PASS" start="2026-10-16T13:13:05.692566" elapsed="1.001902"/>
 </kw>
 <var name="${category}">Pelaaminen</var>
-<status status="PASS" start="2026-10-16T12:57:46.784544" elapsed="7.427986"/>
+<status status="PASS" start="2026-10-16T13:12:59.964517" elapsed="6.730162"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:57:54.213529" elapsed="0.000902"/>
+<status status="PASS" start="2026-10-16T13:13:06.695832" elapsed="0.001089"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:54.216364" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Sim Racing"]'.</msg>
+<msg time="2026-10-16T13:13:06.697872" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Sim Racing"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:57:54.214762" elapsed="0.370010"/>
+<status status="PASS" start="2026-10-16T13:13:06.697297" elapsed="0.414524"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:57:59.586283" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:12.114040" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:54.585020" elapsed="5.001917"/>
+<status status="PASS" start="2026-10-16T13:13:07.112065" elapsed="5.002367"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:59.600836" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:12.125705" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:59.587391" elapsed="0.013662"/>
+<status status="PASS" start="2026-10-16T13:13:12.114750" elapsed="0.011142"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:59.609515" level="INFO">Element 'css:main h1' contains text 'Sim Racing'.</msg>
+<msg time="2026-10-16T13:13:12.132973" level="INFO">Element 'css:main h1' contains text 'Sim Racing'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:57:59.601283" elapsed="0.008364"/>
+<status status="PASS" start="2026-10-16T13:13:12.126097" elapsed="0.007012"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:59.616602" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:12.139591" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:57:59.609801" elapsed="0.006937"/>
+<status status="PASS" start="2026-10-16T13:13:12.133265" elapsed="0.006436"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:57:59.756141" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Sim%20Racing.png"&gt;&lt;img src="../category-Sim%20Racing.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:12.283722" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Sim%20Racing.png"&gt;&lt;img src="../category-Sim%20Racing.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:57:59.616924" elapsed="0.139324"/>
+<status status="PASS" start="2026-10-16T13:13:12.139852" elapsed="0.143978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:12.284147" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:12.283939" elapsed="0.179456"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:01.757475" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:13.465296" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:57:59.756357" elapsed="2.001763"/>
+<status status="PASS" start="2026-10-16T13:13:12.463541" elapsed="1.002292"/>
 </kw>
 <var name="${category}">Sim Racing</var>
-<status status="PASS" start="2026-10-16T12:57:54.212940" elapsed="7.545539"/>
+<status status="PASS" start="2026-10-16T13:13:06.695116" elapsed="6.770977"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:58:01.759707" elapsed="0.001166"/>
+<status status="PASS" start="2026-10-16T13:13:13.467024" elapsed="0.001056"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:01.761947" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Verkkotuotteet"]'.</msg>
+<msg time="2026-10-16T13:13:13.468946" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Verkkotuotteet"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:58:01.761336" elapsed="0.234687"/>
+<status status="PASS" start="2026-10-16T13:13:13.468402" elapsed="0.430767"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:06.997881" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:18.900266" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:01.996198" elapsed="5.002266"/>
+<status status="PASS" start="2026-10-16T13:13:13.899472" elapsed="5.001355"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:07.013122" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:18.918173" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:06.998895" elapsed="0.014579"/>
+<status status="PASS" start="2026-10-16T13:13:18.901318" elapsed="0.017100"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:07.024178" level="INFO">Element 'css:main h1' contains text 'Verkkotuotteet'.</msg>
+<msg time="2026-10-16T13:13:18.927556" level="INFO">Element 'css:main h1' contains text 'Verkkotuotteet'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:58:07.013791" elapsed="0.010631"/>
+<status status="PASS" start="2026-10-16T13:13:18.918663" elapsed="0.009041"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:07.032237" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:18.935028" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:07.024648" elapsed="0.007731"/>
+<status status="PASS" start="2026-10-16T13:13:18.927873" elapsed="0.007283"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:07.155186" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Verkkotuotteet.png"&gt;&lt;img src="../category-Verkkotuotteet.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:19.049333" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Verkkotuotteet.png"&gt;&lt;img src="../category-Verkkotuotteet.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:58:07.032583" elapsed="0.122712"/>
+<status status="PASS" start="2026-10-16T13:13:18.935335" elapsed="0.114100"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:19.049748" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:19.049543" elapsed="0.170534"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:09.157728" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:20.222291" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:07.155400" elapsed="2.002975"/>
+<status status="PASS" start="2026-10-16T13:13:19.220206" elapsed="1.002592"/>
 </kw>
 <var name="${category}">Verkkotuotteet</var>
-<status status="PASS" start="2026-10-16T12:58:01.758994" elapsed="7.399668"/>
+<status status="PASS" start="2026-10-16T13:13:13.466446" elapsed="6.756595"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:58:09.159597" elapsed="0.000825"/>
+<status status="PASS" start="2026-10-16T13:13:20.223888" elapsed="0.000901"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:09.161152" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Tarvikkeet"]'.</msg>
+<msg time="2026-10-16T13:13:20.225575" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Tarvikkeet"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:58:09.160694" elapsed="0.252070"/>
+<status status="PASS" start="2026-10-16T13:13:20.225075" elapsed="0.429936"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:14.414023" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:25.656710" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:09.413111" elapsed="5.001484"/>
+<status status="PASS" start="2026-10-16T13:13:20.655143" elapsed="5.002033"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:14.429580" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:25.671928" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:14.414929" elapsed="0.014953"/>
+<status status="PASS" start="2026-10-16T13:13:25.657564" elapsed="0.014693"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:14.439466" level="INFO">Element 'css:main h1' contains text 'Tarvikkeet'.</msg>
+<msg time="2026-10-16T13:13:25.681675" level="INFO">Element 'css:main h1' contains text 'Tarvikkeet'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:58:14.430177" elapsed="0.009487"/>
+<status status="PASS" start="2026-10-16T13:13:25.672562" elapsed="0.009286"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:14.446697" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:25.688840" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:14.439871" elapsed="0.006945"/>
+<status status="PASS" start="2026-10-16T13:13:25.682035" elapsed="0.006942"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:14.575796" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Tarvikkeet.png"&gt;&lt;img src="../category-Tarvikkeet.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:25.810657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Tarvikkeet.png"&gt;&lt;img src="../category-Tarvikkeet.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:58:14.446985" elapsed="0.128919"/>
+<status status="PASS" start="2026-10-16T13:13:25.689156" elapsed="0.121612"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:25.811088" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:25.810876" elapsed="0.179253"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:16.578612" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:26.991482" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:14.576008" elapsed="2.003245"/>
+<status status="PASS" start="2026-10-16T13:13:25.990260" elapsed="1.001585"/>
 </kw>
 <var name="${category}">Tarvikkeet</var>
-<status status="PASS" start="2026-10-16T12:58:09.159034" elapsed="7.420552"/>
+<status status="PASS" start="2026-10-16T13:13:20.223355" elapsed="6.768678"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:58:16.580572" elapsed="0.000822"/>
+<status status="PASS" start="2026-10-16T13:13:26.992675" elapsed="0.000703"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:16.582192" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Jäähdytys- ja erikoistuotteet"]'.</msg>
+<msg time="2026-10-16T13:13:26.994058" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Jäähdytys- ja erikoistuotteet"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:58:16.581699" elapsed="0.398009"/>
+<status status="PASS" start="2026-10-16T13:13:26.993654" elapsed="0.419548"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:21.982191" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:32.415843" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:16.979842" elapsed="5.002706"/>
+<status status="PASS" start="2026-10-16T13:13:27.413499" elapsed="5.002584"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:21.994576" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:32.426960" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:21.982861" elapsed="0.011928"/>
+<status status="PASS" start="2026-10-16T13:13:32.416325" elapsed="0.010767"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:22.003078" level="INFO">Element 'css:main h1' contains text 'Jäähdytys- ja erikoistuotteet'.</msg>
+<msg time="2026-10-16T13:13:32.434045" level="INFO">Element 'css:main h1' contains text 'Jäähdytys- ja erikoistuotteet'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:58:21.995010" elapsed="0.008208"/>
+<status status="PASS" start="2026-10-16T13:13:32.427246" elapsed="0.006899"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:22.010782" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:32.441020" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:22.003362" elapsed="0.007536"/>
+<status status="PASS" start="2026-10-16T13:13:32.434264" elapsed="0.006870"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:22.131823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-J%C3%A4%C3%A4hdytys-%20ja%20erikoistuotteet.png"&gt;&lt;img src="../category-J%C3%A4%C3%A4hdytys-%20ja%20erikoistuotteet.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:32.563797" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-J%C3%A4%C3%A4hdytys-%20ja%20erikoistuotteet.png"&gt;&lt;img src="../category-J%C3%A4%C3%A4hdytys-%20ja%20erikoistuotteet.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:58:22.011046" elapsed="0.120889"/>
+<status status="PASS" start="2026-10-16T13:13:32.441282" elapsed="0.122626"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:32.564207" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:32.564014" elapsed="0.252097"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:24.132448" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:33.817720" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:22.132034" elapsed="2.000942"/>
+<status status="PASS" start="2026-10-16T13:13:32.816287" elapsed="1.001977"/>
 </kw>
 <var name="${category}">Jäähdytys- ja erikoistuotteet</var>
-<status status="PASS" start="2026-10-16T12:58:16.580062" elapsed="7.553168"/>
+<status status="PASS" start="2026-10-16T13:13:26.992282" elapsed="6.826243"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:58:24.134091" elapsed="0.000764"/>
+<status status="PASS" start="2026-10-16T13:13:33.819595" elapsed="0.000918"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:24.135600" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ohjelmistot"]'.</msg>
+<msg time="2026-10-16T13:13:33.821386" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ohjelmistot"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:58:24.135137" elapsed="0.280362"/>
+<status status="PASS" start="2026-10-16T13:13:33.820890" elapsed="0.254830"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:29.416763" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:39.077192" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:24.415817" elapsed="5.001580"/>
+<status status="PASS" start="2026-10-16T13:13:34.076001" elapsed="5.001810"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:29.430789" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:39.090987" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:29.418004" elapsed="0.013139"/>
+<status status="PASS" start="2026-10-16T13:13:39.078350" elapsed="0.012979"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:29.441345" level="INFO">Element 'css:main h1' contains text 'Ohjelmistot'.</msg>
+<msg time="2026-10-16T13:13:39.101468" level="INFO">Element 'css:main h1' contains text 'Ohjelmistot'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:58:29.431480" elapsed="0.010102"/>
+<status status="PASS" start="2026-10-16T13:13:39.091656" elapsed="0.010054"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:29.449475" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:39.109785" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:29.441819" elapsed="0.007786"/>
+<status status="PASS" start="2026-10-16T13:13:39.101965" elapsed="0.007953"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:29.565641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Ohjelmistot.png"&gt;&lt;img src="../category-Ohjelmistot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:39.219063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Ohjelmistot.png"&gt;&lt;img src="../category-Ohjelmistot.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:58:29.449802" elapsed="0.115947"/>
+<status status="PASS" start="2026-10-16T13:13:39.110101" elapsed="0.109075"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:39.219480" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:39.219285" elapsed="0.168981"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:31.566289" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:40.389878" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:29.565858" elapsed="2.001088"/>
+<status status="PASS" start="2026-10-16T13:13:39.388419" elapsed="1.002050"/>
 </kw>
 <var name="${category}">Ohjelmistot</var>
-<status status="PASS" start="2026-10-16T12:58:24.133576" elapsed="7.433735"/>
+<status status="PASS" start="2026-10-16T13:13:33.818865" elapsed="6.571926"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Checking category: ${category}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-16T12:58:31.568605" elapsed="0.001450"/>
+<status status="PASS" start="2026-10-16T13:13:40.391928" elapsed="0.000868"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:31.570962" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Palvelut"]'.</msg>
+<msg time="2026-10-16T13:13:40.394440" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Palvelut"]'.</msg>
 <arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T12:58:31.570404" elapsed="0.252152"/>
+<status status="PASS" start="2026-10-16T13:13:40.393173" elapsed="0.468069"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:36.825488" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-10-16T13:13:45.863727" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:31.822844" elapsed="5.003172"/>
+<status status="PASS" start="2026-10-16T13:13:40.861401" elapsed="5.002528"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:36.840039" level="INFO">Element 'css:main h1' is displayed.</msg>
+<msg time="2026-10-16T13:13:45.871103" level="INFO">Element 'css:main h1' is displayed.</msg>
 <arg>css:main h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:36.826425" elapsed="0.013896"/>
+<status status="PASS" start="2026-10-16T13:13:45.864104" elapsed="0.007121"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:36.849362" level="INFO">Element 'css:main h1' contains text 'Palvelut'.</msg>
+<msg time="2026-10-16T13:13:45.876224" level="INFO">Element 'css:main h1' contains text 'Palvelut'.</msg>
 <arg>css:main h1</arg>
 <arg>${category}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-10-16T12:58:36.840606" elapsed="0.008976"/>
+<status status="PASS" start="2026-10-16T13:13:45.871343" elapsed="0.004979"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:36.857046" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<msg time="2026-10-16T13:13:45.881530" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
 <arg>xpath:(//main//h5/a)[1]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-10-16T12:58:36.849804" elapsed="0.007378"/>
+<status status="PASS" start="2026-10-16T13:13:45.876433" elapsed="0.005170"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-10-16T12:58:36.967179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Palvelut.png"&gt;&lt;img src="../category-Palvelut.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T13:13:45.981567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-Palvelut.png"&gt;&lt;img src="../category-Palvelut.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>category-${category}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-10-16T12:58:36.857374" elapsed="0.109925"/>
+<status status="PASS" start="2026-10-16T13:13:45.881715" elapsed="0.099960"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:45.981923" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:45.981784" elapsed="0.236769"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-16T12:58:38.969596" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2026-10-16T13:13:47.220076" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-16T12:58:36.967406" elapsed="2.002805"/>
+<status status="PASS" start="2026-10-16T13:13:46.218694" elapsed="1.001542"/>
 </kw>
 <var name="${category}">Palvelut</var>
-<status status="PASS" start="2026-10-16T12:58:31.567839" elapsed="7.402678"/>
+<status status="PASS" start="2026-10-16T13:13:40.391239" elapsed="6.829080"/>
 </iter>
 <var>${category}</var>
 <value>@{categories}</value>
-<status status="PASS" start="2026-10-16T12:57:24.540111" elapsed="74.430572"/>
+<status status="PASS" start="2026-10-16T13:12:39.687915" elapsed="67.532445"/>
 </for>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:47.220865" level="INFO">Clicking element 'xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]'.</msg>
+<arg>xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:47.220618" elapsed="0.034356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:13:50.257318" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:13:47.255170" elapsed="3.002658"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:50.278614" level="INFO">Element 'xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]' is displayed.</msg>
+<arg>xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:13:50.258776" elapsed="0.020123"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:50.415638" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../category-ammattikaytto-ai.png"&gt;&lt;img src="../category-ammattikaytto-ai.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>category-ammattikaytto-ai.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-16T13:13:50.279460" elapsed="0.136299"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:50.416159" level="INFO">Clicking element 'css:header a[title="Etusivu"]'.</msg>
+<arg>css:header a[title="Etusivu"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:50.415972" elapsed="0.179337"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:13:51.596909" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:13:50.595681" elapsed="1.001815"/>
+</kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-16T12:58:38.971467" elapsed="0.169907"/>
+<status status="PASS" start="2026-10-16T13:13:51.598405" elapsed="0.171368"/>
 </kw>
-<status status="PASS" start="2026-10-16T12:57:24.529964" elapsed="74.611567"/>
+<status status="PASS" start="2026-10-16T13:12:32.754867" elapsed="79.015106"/>
 </test>
-<status status="PASS" start="2026-10-16T12:56:29.145076" elapsed="129.998507"/>
+<test id="s1-s1-t2" name="TC_SEARCH_001 Search For PS5" line="58">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:51.773163" level="INFO">Opening browser 'chrome' to base url 'https://www.jimms.fi/'.</msg>
+<arg>https://www.jimms.fi/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-16T13:13:51.772970" elapsed="1.050484"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-16T13:13:52.823797" elapsed="0.367093"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>.</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2026-10-16T13:13:53.191192" elapsed="0.000308"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:13:58.194247" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:13:53.191665" elapsed="5.003185"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:58.209934" level="INFO">${cookie_count} = 0</msg>
+<var>${cookie_count}</var>
+<arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:58.195735" elapsed="0.014396"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://button[normalize-space(.)="Hylkää kaikki"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-16T13:13:58.211220" elapsed="0.000095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="NOT RUN" start="2026-10-16T13:13:58.211441" elapsed="0.000058"/>
+</kw>
+<var name="${index}"/>
+<status status="NOT RUN" start="2026-10-16T13:13:58.211022" elapsed="0.000522"/>
+</iter>
+<var>${index}</var>
+<value>${cookie_count}</value>
+<status status="NOT RUN" start="2026-10-16T13:13:58.210603" elapsed="0.000986"/>
+</for>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:58.212025" level="INFO">Clicking element 'id:searchinput'.</msg>
+<arg>id:searchinput</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:58.211753" elapsed="0.042419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:13:58.254578" level="INFO">Typing text 'ps5' into text field 'id:searchinput'.</msg>
+<arg>id:searchinput</arg>
+<arg>ps5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:13:58.254375" elapsed="0.048015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:03.302937" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:13:58.302575" elapsed="5.000535"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:03.312944" level="INFO">Element 'xpath://a[@href="/fi/Product/Search?q=ps5"]' is displayed.</msg>
+<arg>xpath://a[@href="/fi/Product/Search?q=ps5"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:14:03.303433" elapsed="0.009620"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:03.313511" level="INFO">Clicking element 'xpath://a[@href="/fi/Product/Search?q=ps5"]'.</msg>
+<arg>xpath://a[@href="/fi/Product/Search?q=ps5"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:03.313285" elapsed="0.267876"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:11.582083" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:03.581503" elapsed="8.001202"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.693399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../search-check.png"&gt;&lt;img src="../search-check.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>search-check.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.583831" elapsed="0.109681"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.775488" level="INFO">Element 'css:main' contains text 'Hakusanalla "ps5"'.</msg>
+<arg>css:main</arg>
+<arg>Hakusanalla "ps5"</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.693720" elapsed="0.081931"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.784759" level="INFO">Element 'xpath:(//main//h5/a)[1]' is displayed.</msg>
+<arg>xpath:(//main//h5/a)[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.775894" elapsed="0.008964"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.789752" level="INFO">Element 'xpath:(//main//h5/a)[1]' contains text 'PS5'.</msg>
+<arg>xpath:(//main//h5/a)[1]</arg>
+<arg>PS5</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.785053" elapsed="0.004779"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.794494" level="INFO">${product_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
+<var>${product_title}</var>
+<arg>xpath:(//main//h5/a)[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.790001" elapsed="0.004545"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-10-16T13:14:11.795030" level="INFO">${product_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
+<arg>\${product_title}</arg>
+<arg>${product_title}</arg>
+<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.794790" elapsed="0.000278"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected product: ${product_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.795210" elapsed="0.000214"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:11.827420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../first-product.png"&gt;&lt;img src="../first-product.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]</arg>
+<arg>first-product.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.795538" elapsed="0.032002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:14.830252" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:11.827751" elapsed="3.003082"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:14.890762" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../first-product.png"&gt;&lt;img src="../first-product.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath:(//main//a[contains(@href, '/Product/Show/')]//img)[1]</arg>
+<arg>first-product.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:14.831723" elapsed="0.059220"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:14.937049" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../cart-icon.png"&gt;&lt;img src="../cart-icon.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath:(//main//a[contains(@href, '/ShoppingCart/AddItem')])[1]</arg>
+<arg>cart-icon.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:14.891293" elapsed="0.045889"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:17.940097" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:14.937429" elapsed="3.003283"/>
+</kw>
+<status status="PASS" start="2026-10-16T13:13:51.771898" elapsed="26.169738"/>
+</test>
+<test id="s1-s1-t3" name="TC_PRODUCT_001 Open Product From Search" line="97">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:18.059268" level="INFO">Element 'css:main' contains text 'Hakusanalla "ps5"'.</msg>
+<arg>css:main</arg>
+<arg>Hakusanalla "ps5"</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:17.957673" elapsed="0.101726"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:18.066842" level="INFO">Element 'xpath:(//main//h5/a)[1]' contains text 'PS5'.</msg>
+<arg>xpath:(//main//h5/a)[1]</arg>
+<arg>PS5</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:18.059649" elapsed="0.007300"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:18.067334" level="INFO">Clicking element 'xpath:(//main//h5/a)[1]'.</msg>
+<arg>xpath:(//main//h5/a)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:18.067155" elapsed="0.527262"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:23.597208" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:18.594894" elapsed="5.002506"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:23.605397" level="INFO">Element 'css:main h1' is displayed.</msg>
+<arg>css:main h1</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.597679" elapsed="0.007823"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:23.610521" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
+<arg>css:main h1</arg>
+<arg>PS5</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.605737" elapsed="0.004854"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:23.615303" level="INFO">${opened_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
+<var>${opened_title}</var>
+<arg>css:main h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.610765" elapsed="0.004591"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${opened_title}</arg>
+<arg>${product_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.615529" elapsed="0.000286"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:23.736642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../product-page.png"&gt;&lt;img src="../product-page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>product-page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.615950" elapsed="0.120810"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:26.738877" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:23.737015" elapsed="3.002166"/>
+</kw>
+<status status="PASS" start="2026-10-16T13:14:17.952017" elapsed="8.787663"/>
+</test>
+<test id="s1-s1-t4" name="TC_PRODUCT_002 Verify Add To Cart Link" line="111">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:26.767168" level="INFO">Element 'css:main h1' is displayed.</msg>
+<arg>css:main h1</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.755566" elapsed="0.011879"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:26.777221" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
+<arg>css:main h1</arg>
+<arg>PS5</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.767797" elapsed="0.009654"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:26.787478" level="INFO">Element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]' is displayed.</msg>
+<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.777846" elapsed="0.009808"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:26.794259" level="INFO">Element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]' contains text 'LISÄÄ KORIIN'.</msg>
+<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
+<arg>LISÄÄ KORIIN</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.787974" elapsed="0.006388"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.794550" elapsed="0.007042"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:29.804209" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:26.801773" elapsed="3.002944"/>
+</kw>
+<status status="PASS" start="2026-10-16T13:14:26.748972" elapsed="3.056515"/>
+</test>
+<test id="s1-s1-t5" name="TC_CART_001 Add Product To Shopping Cart" line="120">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:29.830789" level="INFO">${opened_title} = Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!</msg>
+<var>${opened_title}</var>
+<arg>css:main h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:29.817068" elapsed="0.013906"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${opened_title}</arg>
+<arg>${product_title}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-16T13:14:29.831466" elapsed="0.000625"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:29.841249" level="INFO">Element 'css:main h1' contains text 'PS5'.</msg>
+<arg>css:main h1</arg>
+<arg>PS5</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:29.832297" elapsed="0.009131"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:29.842114" level="INFO">Clicking element 'xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]'.</msg>
+<arg>xpath://main//a[contains(@href, '/ShoppingCart/AddItem')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:29.841775" elapsed="0.042743"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:34.886772" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:29.884698" elapsed="5.002623"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:34.888836" level="INFO">Clicking element 'css:a.btn-cart'.</msg>
+<arg>css:a.btn-cart</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:34.888207" elapsed="0.278015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:40.167422" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:35.166522" elapsed="5.001568"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:40.185822" level="INFO">Element 'css:main h1' contains text 'OSTOSKORI'.</msg>
+<arg>css:main h1</arg>
+<arg>OSTOSKORI</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:40.169079" elapsed="0.017088"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:40.202956" level="INFO">Element 'css:main article' contains text 'Rockstar Grand Theft Auto VI (PS5) K-18! Ennakkotilaa!'.</msg>
+<arg>css:main article</arg>
+<arg>${product_title}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-10-16T13:14:40.186907" elapsed="0.016202"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:40.273588" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../shopping-cart.png"&gt;&lt;img src="../shopping-cart.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>shopping-cart.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-16T13:14:40.203526" elapsed="0.070167"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:43.276153" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:40.273903" elapsed="3.002557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:43.277379" level="INFO">Clicking element 'xpath://main//article//*[@role="button" and normalize-space(.)="close"]'.</msg>
+<arg>xpath://main//article//*[@role="button" and normalize-space(.)="close"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-16T13:14:43.276920" elapsed="0.025904"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-16T13:14:46.303611" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-16T13:14:43.303000" elapsed="3.001124"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-16T13:14:46.320518" level="INFO">Current page contains text 'Ostoskorisi on tyhjä'.</msg>
+<arg>Ostoskorisi on tyhjä</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-16T13:14:46.304852" elapsed="0.016025"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-16T13:14:46.321444" elapsed="0.150519"/>
+</kw>
+<status status="PASS" start="2026-10-16T13:14:29.812842" elapsed="16.659511"/>
+</test>
+<status status="PASS" start="2026-10-16T13:12:32.636959" elapsed="133.838843"/>
 </suite>
-<status status="PASS" start="2026-10-16T12:56:29.125845" elapsed="130.018940"/>
+<status status="PASS" start="2026-10-16T13:12:32.616436" elapsed="133.861777"/>
 </suite>
 <statistics>
 <total>
