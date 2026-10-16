@@ -21,6 +21,33 @@ TC_NAV_001 Verify Category Landing Pages
     ...    Tietokoneet
     ...    Komponentit
     ...    Oheislaitteet
+
+    FOR    ${category}    IN    @{categories}
+        Log To Console    Checking category: ${category}
+
+        Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="${category}"]
+        Sleep    5s
+
+        Element Should Be Visible    css:main h1
+        Element Should Contain    css:main h1    ${category}
+        Element Should Be Visible    xpath:(//main//h5/a)[1]
+        Capture Page Screenshot    category-${category}.png
+
+        Click Element    css:header a[title="Etusivu"]
+        Sleep    1s
+    END
+
+    # Show the AI dropdown in its menu order.
+    Log To Console    Checking category: Ammattikäyttö ja AI
+    Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]
+    Sleep    3s
+    Element Should Be Visible    xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]
+    Capture Page Screenshot    category-ammattikaytto-ai.png
+
+    Click Element    css:header a[title="Etusivu"]
+    Sleep    1s
+
+    ${categories}=    Create List
     ...    Pelaaminen
     ...    Sim Racing
     ...    Verkkotuotteet
@@ -40,21 +67,11 @@ TC_NAV_001 Verify Category Landing Pages
         Element Should Be Visible    xpath:(//main//h5/a)[1]
         Capture Page Screenshot    category-${category}.png
 
-        # Return to the homepage before the next category.
         Click Element    css:header a[title="Etusivu"]
         Sleep    1s
     END
 
-    # Open and check the Ammattikäyttö ja AI dropdown.
-    Click Element    xpath://header//nav[contains(@class,"site-nav")]/ul/li/a[normalize-space(.)="Ammattikäyttö ja AI"]
-    Sleep    3s
-    Element Should Be Visible    xpath://header//a[normalize-space(.)="AMD EPYC prosessorit"]
-    Capture Page Screenshot    category-ammattikaytto-ai.png
-
-    Click Element    css:header a[title="Etusivu"]
-    Sleep    1s
     Close Browser
-
 TC_SEARCH_001 Search For PS5
     Open Browser    https://www.jimms.fi/    chrome
     Maximize Browser Window
