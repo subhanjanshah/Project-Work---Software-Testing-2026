@@ -1,3 +1,4 @@
+# Group: Subhanjan Shah, Aurelija Putnaite, Ruhan Ghantiwala
 *** Settings ***
 Library    SeleniumLibrary
 
